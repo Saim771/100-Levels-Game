@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Maze - 100 Levels</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div id="game-board"></div>
+        <div class="game-ui">
+            <div class="level-display">Level: <span id="level-number">1</span>/100</div>
+            <div class="moves-display">Moves: <span id="moves-count">0</span></div>
+            <div class="timer-display">Time: <span id="time-count">0</span>s</div>
+            <button id="rotate-left" class="control-btn">↻ Rotate Left</button>
+            <button id="rotate-right" class="control-btn">↺ Rotate Right</button>
+            <button id="reset-level" class="control-btn">⟲ Reset</button>
+        </div>
+        <div id="level-complete" class="modal">
+            <div class="modal-content">
+                <h2>Level Complete!</h2>
+                <p>Moves: <span id="complete-moves">0</span></p>
+                <p>Time: <span id="complete-time">0</span>s</p>
+                <button id="next-level">Next Level</button>
+            </div>
+        </div>
+        <div id="game-complete" class="modal">
+            <div class="modal-content">
+                <h2>Congratulations!</h2>
+                <p>You've completed all 100 levels!</p>
+                <p>Total Moves: <span id="total-moves">0</span></p>
+                <p>Total Time: <span id="total-time">0</span>s</p>
+                <button id="play-again">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <audio id="bg-music" loop>
+        <source src="assets/music/background.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="rotate-sound">
+        <source src="assets/sounds/rotate.wav" type="audio/wav">
+    </audio>
+    <audio id="complete-sound">
+        <source src="assets/sounds/complete.wav" type="audio/wav">
+    </audio>
+    <audio id="win-sound">
+        <source src="assets/sounds/win.wav" type="audio/wav">
+    </audio>
+    <script src="game.js"></script>
+</body>
+</html>
